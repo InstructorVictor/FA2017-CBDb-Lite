@@ -1,0 +1,97 @@
+* {
+    /* Universal Selctor: Affects ALL HTML Elements at once.
+        Removes (hides) the highlight color form Tap and Hold
+    */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    /* Additional tricks to hide the highlight effect. */
+    /* Webkit - Chrome, Safair, Opera browsers; -ms Windows */
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-user-select: none;
+    user-select: none;
+	
+    background-color:#32383d;
+    /* A list of the most basic fonts per platform */
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    /* Font sizes in EM units can grow/shrink based on device */
+    font-size: 1em;
+}
+
+/* Activate a custom font via @font-face */
+/*
+@font-face {
+    font-family: 'dj_grossnormal';
+    src: url('DJGROSS-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* Use the font-family to apply to a text element */
+/*
+h1, h2, h3, h4, label, legend {
+    font-family: 'dj_grossnormal';
+}
+
+label, legend {
+    font-family: 'chiller';
+}*/
+
+
+.ui-header .ui-title {
+    font-size: 1.25em;
+}
+
+/* Select a <table> inside of a <div> with ID divShowComicsTable */
+#divShowComicsTable table {
+    background-color: whitesmoke; /* BG color of table */
+    width: 100%;                  /* Stretch table to max of parent size */
+    margin: auto;                 /* Auto center content */
+    word-wrap: break-word;        /* Word wrap words that are too long */
+    text-shadow: none;            /* Negate the built-in jQM text shadow */
+    border: 5px solid red;
+    /* border: 25px double rgba(200, 0, 0, 0.75);*/
+}
+
+/* Select a <th> inside a <table> inside a <div>  with ID divShowComicsTable */
+#divShowComicsTable table th {
+    background-color: rebeccapurple;
+    color: aquamarine;
+}
+
+/* Select every Odd-numbered row <tr> in <table> in <div> 
+    Zebra striping: odd and even colors in a table.
+    The solid version of the color rgb()
+*/
+#divShowComicsTable table tr:nth-of-type(odd) {
+    background-color: rgb(0, 50, 200);
+    color: aquamarine;
+}
+
+/* 50% visible version of the color rgba() */
+#divShowComicsTable table tr:nth-of-type(even) {
+    background-color: rgba(0, 50, 200, 0.5);
+    color: aquamarine;
+}
+
+/*Select the ui-content class (child of) ui-dialog-contain screens */
+.ui-dialog-contain > .ui-content {
+    background-color: aliceblue;
+}
+
+.comicImg {
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+/*
+    Name:       Victor Campos <vcampos@sdccd.edu>
+    Date:       2017-11-28
+    Project:    CBDb
+    Version:    1.0
+    Description:A comic book database app. 
+*/
